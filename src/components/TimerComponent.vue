@@ -1,9 +1,9 @@
 <template>
   <div
-    class="mx-auto p-8 bg-gradient-to-r from-blue-500 to-teal-500 rounded-xl shadow-xl"
+    class="mx-auto p-6 sm:p-8 bg-gradient-to-r from-blue-500 to-teal-500 rounded-xl shadow-xl max-w-screen-md"
   >
     <div class="mb-6 text-center">
-      <h2 class="text-3xl font-extrabold text-white mb-4">
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-white mb-4">
         What are you working on?
       </h2>
     </div>
@@ -12,7 +12,7 @@
       <select
         v-model="selectedTask"
         :disabled="isTimerRunning"
-        class="w-full p-4 border border-gray-300 rounded-lg bg-white text-gray-900 shadow-lg focus:outline-none focus:ring-4 focus:ring-teal-500 focus:border-teal-500 transition duration-300 ease-in-out"
+        class="w-full p-3 sm:p-4 border border-gray-300 rounded-lg bg-white text-gray-900 shadow-lg focus:outline-none focus:ring-4 focus:ring-teal-500 focus:border-teal-500 transition duration-300 ease-in-out"
       >
         <option value="" disabled selected>Select Task</option>
         <option v-for="task in tasks" :key="task.id" :value="task.id">
@@ -22,9 +22,11 @@
     </div>
 
     <div
-      class="text-6xl font-extrabold text-white text-center mb-6 p-6 bg-gray-800 rounded-lg shadow-lg border border-gray-600"
+      class="text-center mb-6 p-4 sm:p-6 bg-gray-800 rounded-lg shadow-lg border border-gray-600"
     >
-      {{ formattedTime }}
+      <span class="text-4xl font-extrabold text-white">
+        {{ formattedTime }}
+      </span>
     </div>
 
     <div
@@ -45,13 +47,13 @@
           },
         ]"
       >
-        <span v-if="!isTimerRunning" class="mr-3 text-4xl">
+        <span v-if="!isTimerRunning" class="mr-3 text-2xl sm:text-4xl">
           <i class="fas fa-play"></i>
         </span>
-        <span v-else class="mr-3 text-4xl">
+        <span v-else class="mr-3 text-2xl sm:text-4xl">
           <i class="fas fa-stop"></i>
         </span>
-        <span class="text-xl font-semibold">{{
+        <span class="text-lg sm:text-xl font-semibold">{{
           isTimerRunning ? "Stop" : "Start"
         }}</span>
       </button>

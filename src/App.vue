@@ -8,13 +8,13 @@
     </header>
 
     <!-- Main Content -->
-    <main class="pt-16 flex-1">
+    <main class="pt-16 flex-1 overflow-y-auto">
       <router-view />
     </main>
 
     <!-- Footer -->
     <footer
-      class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 text-gray-300 py-4 text-center mt-48 sm:mt-0"
+      class="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 text-gray-300 py-4 text-center"
     >
       <p class="text-sm">&copy; 2024 My Time tracker. All rights reserved.</p>
       <p class="text-sm">Built by Donald1597</p>
